@@ -1,6 +1,20 @@
 package math.problems;
-
+import java.util.Arrays;
 public class FindMissingNumber {
+
+    public static int missingNumber(int array[]) {
+        boolean[] numbers = new boolean[array.length + 2];
+        for (int i = 0; i < array.length; i++) {
+            numbers[array[i]] = true;
+        }
+        //return missing number
+        for (int i = 1; i < numbers.length; i++) {
+            if (!numbers[i]) {
+                return i;
+            }
+        }
+        return -1;
+    }
 
     public static void main(String[] args) {
         /*
@@ -8,19 +22,7 @@ public class FindMissingNumber {
          * For example {10, 2, 1, 4, 5, 3, 7, 8, 6}. One number will be missing in array (9 in this case).
          * Write java code to find the missing number from the array. Write static helper method to find it.
          */
-        int[] array = new int[] { 10, 2, 1, 4, 5, 3, 7, 8, 6,};
-
-        System.out.println("Give Array : 10, 2, 1, 4, 5, 3, 7, 8, 6,  ");
-        System.out.println("Missing Number is " + findMissingNumber(array));
-
-    }
-    public static int findMissingNumber(int[] arr){
-        int length = arr.length;
-        int n = ( (length + 1) * (length + 2) ) / 2;
-        for(int i = 0; i < length; i++)
-            n -= arr[i];
-
-        return n;
-
+        int[] array = {10, 2, 9, 4, 5, 3, 1, 8, 6};
+        System.out.println(missingNumber(array));
     }
 }
