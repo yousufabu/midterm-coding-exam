@@ -1,5 +1,6 @@
 package datastructure;
-
+import java.io.FileReader;
+import java.io.IOException;
 public class DataReader {
 
 	public static void main(String[] args) {
@@ -19,7 +20,19 @@ public class DataReader {
 		 */
 
 		String textFile = System.getProperty("user.dir") + "/src/data/self-driving-car.txt";
+		//String textFilePath = System.getProperty("user.dir") + "/src/data_structures/data/self-driving-car.txt";
+		try {
+			FileReader reader = new FileReader("C://DataReader/HemalDataReader.txt");
+			int character;
 
+			while ((character = reader.read()) != -1) {
+				System.out.print((char) character);
+			}
+			reader.close();
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 
 
 	}

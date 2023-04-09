@@ -1,5 +1,7 @@
 package datastructure;
+import databases.SharedStepsDatabase;
 
+import java.util.*;
 public class UseMap {
 
 	public static void main(String[] args) {
@@ -10,6 +12,24 @@ public class UseMap {
 		 *
 		 * Use any databases[MongoDB, Oracle, MySql] to store data and retrieve data.
 		 */
+		HashMap<Object, Object> map = new HashMap<>();
+		map.put(8454, "lamia");
+		map.put(4567, "azar");
+		map.put(7898, "rahim");
+
+		// Retrieving "Keys" & "Values" using an Iterator
+		Iterator<Object> mapIter = map.keySet().iterator();
+		Object key;
+		while (mapIter.hasNext()) {
+			key = mapIter.next();
+			System.out.println("KEY: " + key);
+			System.out.println("VALUE: " + map.get(key));
+		}
+
+		String tableName = "`test_hash_map`";
+		SharedStepsDatabase sql = new SharedStepsDatabase();
+
+
 
 	}
 
