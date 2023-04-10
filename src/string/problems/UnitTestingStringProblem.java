@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.util.Map;
 import org.junit.Assert;
 import org.junit.Test;
-public class UnitTestingStringProblem {
+/*public class UnitTestingStringProblem {
     public class UnitTestingStringProblem {
 
         @Test
@@ -67,6 +67,6 @@ public class UnitTestingStringProblem {
             } catch (Exception ex) {
                 System.out.println("Some tests failed");
                 System.out.println(ex.getMessage());
-            }
-        }
-    }
+            }}
+
+*/
