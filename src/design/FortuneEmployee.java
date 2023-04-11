@@ -14,9 +14,15 @@ public class FortuneEmployee {
 	 *
 	 **/
 	public static void main(String[] args) {
-		
 
+
+
+			FortuneEmployee fe = new FortuneEmployee();
+		}
 
 	}
 
-}
+
+
+
+
